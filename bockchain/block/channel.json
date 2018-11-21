@@ -1,0 +1,83 @@
+{
+	"payload": {
+		"data": {
+			"config_update": {
+				"channel_id": "mychannel",
+				"read_set": {
+					"groups": {
+						"Application": {
+							"groups": {
+								"Org1MSP": {},
+								"Org2MSP": {}
+							}
+						}
+					},
+					"values": {
+						"Consortium": {
+							"value": {
+								"name": "SampleConsortium"
+							}
+						}
+					}
+				},
+				"write_set": {
+					"groups": {
+						"Application": {
+							"groups": {
+								"Org1MSP": {},
+								"Org2MSP": {}
+							},
+							"mod_policy": "Admins",
+							"policies": {
+								"Admins": {
+									"mod_policy": "Admins",
+									"policy": {
+										"type": 3,
+										"value": {
+											"rule": "MAJORITY",
+											"sub_policy": "Admins"
+										}
+									}
+								},
+								"Readers": {
+									"mod_policy": "Admins",
+									"policy": {
+										"type": 3,
+										"value": {
+											"sub_policy": "Readers"
+										}
+									}
+								},
+								"Writers": {
+									"mod_policy": "Admins",
+									"policy": {
+										"type": 3,
+										"value": {
+											"sub_policy": "Writers"
+										}
+									}
+								}
+							},
+							"version": "1"
+						}
+					},
+					"values": {
+						"Consortium": {
+							"value": {
+								"name": "SampleConsortium"
+							}
+						}
+					}
+				}
+			}
+		},
+		"header": {
+			"channel_header": {
+				"channel_id": "mychannel",
+				"timestamp": "2018-11-13T08:38:22.000Z",
+				"tx_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+				"type": 2
+			}
+		}
+	}
+}
